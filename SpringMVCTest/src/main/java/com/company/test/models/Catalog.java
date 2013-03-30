@@ -5,35 +5,17 @@ import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-
-
-
-@XmlRootElement(name = "Catalog")
-
-
+@XmlRootElement(name = "CATALOG")
 public class Catalog {
-  
+	
+	@XmlElement(name = "CD")
+	public ArrayList<CD> cdList;
 
-    @XmlElement(name = "Cd")
-    private ArrayList<cd> cdList;
+	public void setCdList(ArrayList<CD> bookList) {
+		this.cdList = bookList;
+	}
 
-	public ArrayList<cd> getCd2List() {
+	public ArrayList<CD> getCdsList() {
 		return cdList;
 	}
-
-	public void setCd2List(ArrayList<cd> cdList) {
-		this.cdList = cdList;
-	}
-
-	
-
-
- 
-    
-
-
-    
 }
-
-
-
